@@ -1,11 +1,11 @@
-<div class="info top">
+<div class="info top bottom">
   <div class="row">
     <div class="col">
       <p>Información del vehículo</p>
 
       <label for="placa">Placa</label>
       <div class="form-label-group">
-        <input type="text" class="form-control" id="placa" name="placa" placeholder="" value="" required [(ngModel)]="placa">
+        <input type="text" class="form-control" id="placa" name="placa" placeholder="" value="" required disabled [(ngModel)]="placa">
       </div>
 
       <label for="color">Color</label>
@@ -68,5 +68,5 @@
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary top" (click)="guardarEdicion()">Guardar</button>
+  <button type="submit" class="btn btn-primary top bottom" (click)="guardarEdicion()">Guardar</button>
 </div>

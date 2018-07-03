@@ -1,5 +1,18 @@
-<div class="container">
-    <app-buscar-vehiculos></app-buscar-vehiculos>
-
-    <app-editar-vehiculo></app-editar-vehiculo>
+<div class="container top back">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#vehiculo" role="tab" aria-controls="home" aria-selected="true">Vehículo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#info" role="tab" aria-controls="profile" aria-selected="false">Información General</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="vehiculo" role="tabpanel" aria-labelledby="home-tab">
+            <app-buscar-vehiculos></app-buscar-vehiculos>
+        </div>
+        <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="profile-tab">
+            <app-editar-vehiculo></app-editar-vehiculo>
+        </div>
+    </div>
 </div>

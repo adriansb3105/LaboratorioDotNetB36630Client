@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Vehiculo } from '../model/vehiculo.model';
 import { DataShareService } from '../data-share.service';
 import { FilterPipe } from '../filter.pipe';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-buscar-vehiculos',
@@ -11,16 +12,10 @@ import { FilterPipe } from '../filter.pipe';
 export class BuscarVehiculosComponent implements OnInit {
 
   public vehiculos: Vehiculo[];
-  //public vehiculo: Vehiculo;
 
   constructor(private dataShareService: DataShareService, private filterPipe: FilterPipe) { }
 
   ngOnInit() {
-    /*this.dataShareService.currentMessage.subscribe(vehiculo => {
-      if(vehiculo != null){
-        this.vehiculo = vehiculo;
-      }
-    });*/
     this.dataShareService.obtenerVehiculos().subscribe(data => {
       this.vehiculos = data;
     });
@@ -28,6 +23,7 @@ export class BuscarVehiculosComponent implements OnInit {
 
   editarVehiculo(vehiculo: Vehiculo){
     this.dataShareService.editarVehiculo(vehiculo);
+    Swal('Editar', 'Ingrese a la pestaña de Información General', 'success');
   }
 
   getVehiculos(): Vehiculo[]{

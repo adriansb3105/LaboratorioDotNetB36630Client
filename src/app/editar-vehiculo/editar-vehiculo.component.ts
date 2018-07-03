@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Vehiculo } from '../model/vehiculo.model';
 import { DataShareService } from '../data-share.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar-vehiculo',
@@ -46,7 +47,7 @@ export class EditarVehiculoComponent implements OnInit {
   guardarEdicion() {
     let vehiculo: Vehiculo = new Vehiculo(this.placa, this.color, this.marca, this.estilo, this.anio, this.potencia, this.cilindraje, this.capacidad, this.peso, this.numChasis, this.numMotor, this.observaciones);
     this.dataShareService.guardarEdicion(this.placa, vehiculo).subscribe(data => {
-      
+      Swal('Hecho', 'El vehiculo ha sido editado', 'success');
     });
   }
 
