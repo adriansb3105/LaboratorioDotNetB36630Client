@@ -1,0 +1,21 @@
+.top{
+    margin-top: 1em;
+}
+
+.loader-container{
+    width: 100%;
+    text-align: center;
+}
+
+.center{
+    display: inline-block;
+}
+
+table tbody tr td input[type="number"] {
+    width: 6em;
+}
+
+.vehiculo{
+    background-color: #135784;
+    color: #fff;
+}

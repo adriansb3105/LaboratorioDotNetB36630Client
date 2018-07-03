@@ -1,0 +1,72 @@
+<div class="info top">
+  <div class="row">
+    <div class="col">
+      <p>Información del vehículo</p>
+
+      <label for="placa">Placa</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="placa" name="placa" placeholder="" value="" required [(ngModel)]="placa">
+      </div>
+
+      <label for="color">Color</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="color" name="color" placeholder="" value="" required [(ngModel)]="color">
+      </div>
+
+      <label for="marca">Marca</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="marca" name="marca" placeholder="" value="" required [(ngModel)]="marca">
+      </div>
+
+      <label for="estilo">Estilo</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="estilo" name="estilo" placeholder="" value="" required [(ngModel)]="estilo">
+      </div>
+
+      <label for="anio">Año</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="anio" name="anio" placeholder="" value="" required [(ngModel)]="anio">
+      </div>
+
+      <label for="potencia">Potencia</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="potencia" name="potencia" placeholder="" value="" required [(ngModel)]="potencia">
+      </div>
+
+      <label for="cilindraje">Cilindraje</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="cilindraje" name="cilindraje" placeholder="" value="" required [(ngModel)]="cilindraje">
+      </div>
+
+      <label for="capacidad">Capacidad</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="capacidad" name="capacidad" placeholder="" value="" required [(ngModel)]="capacidad">
+      </div>
+
+      <label for="peso">Peso</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="peso" name="peso" placeholder="" value="" required [(ngModel)]="peso">
+      </div>
+
+      <label for="numChasis">Número de chasis</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="numChasis" name="numChasis" placeholder="" value="" required [(ngModel)]="numChasis">
+      </div>
+
+      <label for="numMotor">Número de motor</label>
+      <div class="form-label-group">
+        <input type="text" class="form-control" id="numMotor" name="numMotor" placeholder="" value="" required [(ngModel)]="numMotor">
+      </div>
+      
+
+    </div>
+    <div class="col">
+      <label for="observaciones">Observaciones generales</label>
+      <div class="form-label-group">
+        <textarea name="observaciones" id="observaciones" class="width height" [(ngModel)]="observaciones"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary top" (click)="guardarEdicion()">Guardar</button>
+</div>
