@@ -45,7 +45,9 @@ export class EditarVehiculoComponent implements OnInit {
 
   guardarEdicion() {
     let vehiculo: Vehiculo = new Vehiculo(this.placa, this.color, this.marca, this.estilo, this.anio, this.potencia, this.cilindraje, this.capacidad, this.peso, this.numChasis, this.numMotor, this.observaciones);
-    console.log(vehiculo);
+    this.dataShareService.guardarEdicion(this.placa, vehiculo).subscribe(data => {
+      
+    });
   }
 
 }

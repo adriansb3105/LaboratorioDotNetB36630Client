@@ -28,4 +28,9 @@ export class DataShareService {
         return this.http.get(this.url + "vehiculo/", { headers: this.headers})
         .pipe(map(response => response.json()))
     }
+
+    guardarEdicion(placa:String, vehiculo: Vehiculo): Observable<Vehiculo>{
+        return this.http.put(this.url + 'vehiculo/' + placa, vehiculo, { headers: this.headers})
+        .pipe(map(response => response.json()));
+    }
 }
